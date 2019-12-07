@@ -11,7 +11,7 @@ y = dataset.target
 
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=0)
 
-knn_classifier = neighbors.KNeighborsClassifier(n_neighbors=2)
+knn_classifier = neighbors.KNeighborsClassifier() # here n_neighbors value byDefault is 5 (n_neighbors=5)
 
 # fit data into the model
 knn_classifier.fit(x_train , y_train)
